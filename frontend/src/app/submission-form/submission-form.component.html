@@ -1,0 +1,25 @@
+<h3>Submission Form</h3>
+
+<form [formGroup]="myForm" (ngSubmit)="submitForm()">
+    <div class="mt-2">
+        <label for="category">Category:</label>
+        <select id="category" class="form-select" aria-label="Default select example" formControlName="category">
+          <option value="SPORTS">SPORTS</option>
+          <option value="FINANCE">FINANCE</option>
+          <option value="MOVIES">MOVIES</option>
+        </select>
+    </div>
+    
+    <div>
+      <div class="input-group mt-2">
+        <span class="input-group-text">Message</span>
+        <textarea id="message" formControlName="message" class="form-control" aria-label="With textarea"></textarea>
+      </div>
+    </div>
+    <div class="mt-2">
+        <button type="submit" class="btn btn-primary">Send Message</button>
+    </div>
+  </form>
+
+  <app-log-history [logData]="logData"></app-log-history>
+  

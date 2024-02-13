@@ -1,0 +1,9 @@
+<div *ngIf="logData">
+    <h3>Log History</h3>
+    <ul>
+      <li *ngFor="let log of logData">
+        'Date: ' {{ log.timestamp }} - 'Customer id: '  {{ log.customerId }} - {{ log.message }} - {{log.notificationType}}
+      </li>
+    </ul>
+  </div>
+  
